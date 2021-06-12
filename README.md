@@ -1,3 +1,7 @@
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=arkadiuszmichno_react-hooks&metric=code_smells)](https://sonarcloud.io/dashboard?id=arkadiuszmichno_react-hooks)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=arkadiuszmichno_react-hooks&metric=bugs)](https://sonarcloud.io/dashboard?id=arkadiuszmichno_react-hooks)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=arkadiuszmichno_react-hooks&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=arkadiuszmichno_react-hooks)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
