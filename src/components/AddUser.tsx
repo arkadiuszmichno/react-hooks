@@ -15,11 +15,11 @@ export const AddUser = (props: AddUserProps) => {
     }
 
     function addUserToSystem() {
-        addUser(user).then(user => {
-            console.log(user);
+        addUser(user).then(usr => {
+            console.log(usr);
             setUsers([
                 ...users,
-                user
+                usr
             ]);
         });
     }

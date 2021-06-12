@@ -13,7 +13,7 @@ export const Users = (props: UsersProps) => {
         removeUser(id).then(user => {
             console.log(user);
             if (user.ok) {
-                const filteredUsers = users.filter(user => user.id !== id)
+                const filteredUsers = users.filter(usr => usr.id !== id)
                 setUsers([...filteredUsers])
             }
         });

@@ -15,11 +15,11 @@ export const AddGiftCard = (props: AddGiftCardProps) => {
     }
 
     function addBookToSystem() {
-        addGiftCard(giftCard).then(giftCard => {
-            console.log(giftCard);
+        addGiftCard(giftCard).then(gc => {
+            console.log(gc);
             setGiftCards([
                 ...giftCards,
-                giftCard
+                gc
             ]);
         });
     }

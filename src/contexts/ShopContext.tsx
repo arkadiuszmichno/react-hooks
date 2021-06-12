@@ -10,14 +10,19 @@ const defaultValue: IShopContextState = {
     giftCards: [],
     isLoggedIn: false,
     setCategories: () => {
+        // Not doing anything at initialization
     },
     setBooks: () => {
+        // Not doing anything at initialization
     },
     setUsers: () => {
+        // Not doing anything at initialization
     },
     setGiftCards: () => {
+        // Not doing anything at initialization
     },
     setIsLoggedIn: () => {
+        // Not doing anything at initialization
     }
 }
 
@@ -45,14 +50,14 @@ export const ShopContextProvider: React.FC = ({children}) => {
 
     useEffect(() => {
         fetchCategories()
-            .then((categories) => {
-                console.log(categories)
-                setCategories(categories)
+            .then((categs) => {
+                console.log(categs)
+                setCategories(categs)
             })
         fetchBooks()
-            .then((books) => {
-                console.log(books)
-                setBooks(books)
+            .then((bks) => {
+                console.log(bks)
+                setBooks(bks)
             })
     }, []);
 

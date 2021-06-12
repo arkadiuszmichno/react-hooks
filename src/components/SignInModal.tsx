@@ -58,7 +58,7 @@ export const SignInModal = (props: SignInModalProps) => {
         setModalIsOpenToTrue();
     }, []);
 
-    function navigateTo(url: String) {
+    function navigateTo(url: string) {
         window.location.assign("http://localhost:9000" + url)
     }
 

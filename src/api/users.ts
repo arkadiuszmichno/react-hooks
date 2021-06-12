@@ -1,7 +1,7 @@
 import {IUser} from "../interface";
 
 export const fetchUsers = async (): Promise<IUser[]> => {
-    return await fetch(`http://localhost:9000/user`)
+    return fetch(`http://localhost:9000/user`)
         .then(response => response.json())
 }
 
@@ -33,7 +33,7 @@ export const signUserIn = (body: any): Promise<any> => {
 }
 
 export const removeUser = async (id: number) => {
-    return await fetch(`http://localhost:9000/user/` + id, {
+    return fetch(`http://localhost:9000/user/` + id, {
         method: 'DELETE',
         mode: 'cors',
         headers: {

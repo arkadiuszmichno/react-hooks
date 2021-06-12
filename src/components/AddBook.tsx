@@ -15,11 +15,11 @@ export const AddBook = (props: AddBookProps) => {
     }
 
     function addBookToSystem() {
-        addBook(book).then(book => {
-            console.log(book);
+        addBook(book).then(bk => {
+            console.log(bk);
             setBooks([
                 ...books,
-                book
+                bk
             ]);
         });
     }
