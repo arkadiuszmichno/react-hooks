@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {ICategory} from "../interface";
-import ShopContext from "../contexts/ShopContext";
 import {addCategory, removeCategory} from "../api/categories";
+import ShopContext from "../contexts/ShopContext";
 
 export interface CategoriesProps extends React.ReactHTML {
 }
@@ -9,6 +9,7 @@ export interface CategoriesProps extends React.ReactHTML {
 export const Categories = (props: CategoriesProps) => {
     const {categories, setCategories} = useContext(ShopContext)
     let newName = '';
+
     function addCategoryToContext(name: string) {
         addCategory(name).then(category => {
             console.log(category);
@@ -48,7 +49,9 @@ export const Categories = (props: CategoriesProps) => {
                     </tr>
                     {categories.map((product: ICategory) => (<tr>
                         <td>{product.name}</td>
-                        <td><button onClick={() => removeCategoryToContext(product.id)}>Usun</button></td>
+                        <td>
+                            <button onClick={() => removeCategoryToContext(product.id)}>Usun</button>
+                        </td>
                     </tr>))}
                 </table>
             </div>

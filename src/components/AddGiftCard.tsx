@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
-import ShopContext from "../contexts/ShopContext";
 import {ICategory} from "../interface";
 import {addGiftCard} from "../api/giftCards";
+import ShopContext from "../contexts/ShopContext";
 
 export interface AddGiftCardProps extends React.ReactHTML {
 }

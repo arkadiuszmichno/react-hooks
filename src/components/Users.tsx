@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {IUser} from "../interface";
-import ShopContext from "../contexts/ShopContext";
 import {removeUser} from "../api/users";
+import ShopContext from "../contexts/ShopContext";
 
 export interface UsersProps extends React.ReactHTML {
 }

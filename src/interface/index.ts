@@ -1,4 +1,3 @@
-
 type Dispatch<A> = (value: A) => void;
 
 export interface ICategory {
@@ -28,13 +27,25 @@ export interface IGiftCard {
     category: number
 }
 
+export interface ISignUpFormStore {
+    email: string,
+    password: string
+}
+
+export interface IOauthContextState {
+    isLoggedIn: boolean,
+    setIsLoggedIn: Function
+}
+
 export type IShopContextState = {
     categories: ICategory[];
     books: IBook[];
     users: IUser[];
     giftCards: IGiftCard[],
+    isLoggedIn: boolean,
     setCategories: Function;
     setBooks: Function;
     setUsers: Function,
-    setGiftCards: Function
+    setGiftCards: Function,
+    setIsLoggedIn: Function
 }

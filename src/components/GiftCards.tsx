@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {IGiftCard} from "../interface";
-import ShopContext from "../contexts/ShopContext";
 import {removeGiftCard} from "../api/giftCards";
+import ShopContext from "../contexts/ShopContext";
 
 export interface GiftCardsProps extends React.ReactHTML {
 }

@@ -1,7 +1,7 @@
 import {IGiftCard} from "../interface";
 
 export const fetchGiftCards = async (): Promise<IGiftCard[]> => {
-    return await fetch(`http://localhost:12345/giftCard`)
+    return await fetch(`http://localhost:9000/giftCard`)
         .then(response => response.json())
 }
 
@@ -9,7 +9,7 @@ export const fetchGiftCards = async (): Promise<IGiftCard[]> => {
 export const addGiftCard = async (body: any): Promise<IGiftCard> => {
     body.value = parseInt(body.value);
     body.category = parseInt(body.category);
-    return await fetch(`http://localhost:12345/giftCard`, {
+    return await fetch(`http://localhost:9000/giftCard`, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -22,7 +22,7 @@ export const addGiftCard = async (body: any): Promise<IGiftCard> => {
 }
 
 export const removeGiftCard = async (id: number) => {
-    return await fetch(`http://localhost:12345/giftCard/` + id, {
+    return await fetch(`http://localhost:9000/giftCard/` + id, {
         method: 'DELETE',
         mode: 'cors',
         headers: {

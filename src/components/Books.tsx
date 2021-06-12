@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {IBook} from "../interface";
-import ShopContext from "../contexts/ShopContext";
 import {removeBook} from "../api/books";
+import ShopContext from "../contexts/ShopContext";
 
 export interface BooksProps extends React.ReactHTML {
 }

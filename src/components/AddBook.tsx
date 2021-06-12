@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
-import ShopContext from "../contexts/ShopContext";
 import {addBook} from "../api/books";
 import {ICategory} from "../interface";
+import ShopContext from "../contexts/ShopContext";
 
 export interface AddBookProps extends React.ReactHTML {
 }
@@ -38,7 +38,8 @@ export const AddBook = (props: AddBookProps) => {
                     </div>
                     <div className="row">
                         <label htmlFor="category">Kategoria: </label>
-                        <select value={this} id="category" name="category" onChange={e => book.category = e.target.value} >
+                        <select value={this} id="category" name="category" onChange={e => book.category = e.target.value}>
+                            <option value=''>---</option>
                             {categories.map((category: ICategory) => (<option value={category.id}>
                                 {category.name}
                             </option>))}

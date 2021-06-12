@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {IBook} from "../interface";
-import ShopContext from "../contexts/ShopContext";
 import useBasket from "../hooks/useBasket";
+import ShopContext from "../contexts/ShopContext";
 
 export interface BasketProps extends React.ReactHTML {
 }
@@ -24,7 +24,9 @@ export const Basket = (props: BasketProps) => {
                         <td>{product.name}</td>
                         <td>{product.description}</td>
                         <td>{categories.filter(category => category.id === product.category)[0].name}</td>
-                        <td><button onClick={() => addBook(product)}>add product to basket</button></td>
+                        <td>
+                            <button onClick={() => addBook(product)}>add product to basket</button>
+                        </td>
                     </tr>))}
                 </table>
             </div>
@@ -43,7 +45,9 @@ export const Basket = (props: BasketProps) => {
                         <td>{product.name}</td>
                         <td>{product.description}</td>
                         <td>{categories.filter(category => category.id === product.category)[0].name}</td>
-                        <td><button onClick={() => removeBook(product.id)}>remove product</button></td>
+                        <td>
+                            <button onClick={() => removeBook(product.id)}>remove product</button>
+                        </td>
                     </tr>))}
                 </table>
             </div>

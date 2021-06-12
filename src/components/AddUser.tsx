@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
-import ShopContext from "../contexts/ShopContext";
 import {addUser} from "../api/users";
+import ShopContext from "../contexts/ShopContext";
 
 export interface AddUserProps extends React.ReactHTML {
 }

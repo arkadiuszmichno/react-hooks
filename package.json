@@ -11,6 +11,7 @@
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.3",
     "axios": "^0.21.1",
+    "materialize-css": "^1.0.0-rc.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -43,6 +44,9 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.7"
+    "@types/materialize-css": "^1.0.10",
+    "@types/react-modal": "^3.12.0",
+    "@types/react-router-dom": "^5.1.7",
+    "react-modal": "^3.14.2"
   }
 }

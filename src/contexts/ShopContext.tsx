@@ -8,6 +8,7 @@ const defaultValue: IShopContextState = {
     books: [],
     users: [],
     giftCards: [],
+    isLoggedIn: false,
     setCategories: () => {
     },
     setBooks: () => {
@@ -15,6 +16,8 @@ const defaultValue: IShopContextState = {
     setUsers: () => {
     },
     setGiftCards: () => {
+    },
+    setIsLoggedIn: () => {
     }
 }
 
@@ -25,16 +28,19 @@ export const ShopContextProvider: React.FC = ({children}) => {
     const [books, setBooks] = useState<IBook[]>([]);
     const [users, setUsers] = useState<IUser[]>([]);
     const [giftCards, setGiftCards] = useState<IGiftCard[]>([]);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const providerValue: IShopContextState = {
         categories,
         books,
         users,
         giftCards,
+        isLoggedIn,
         setCategories,
         setBooks,
         setUsers,
-        setGiftCards
+        setGiftCards,
+        setIsLoggedIn
     }
 
     useEffect(() => {
