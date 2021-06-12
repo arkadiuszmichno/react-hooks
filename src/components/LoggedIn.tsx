@@ -12,7 +12,7 @@ export const LoggedIn = (props: LoggedInProps) => {
     useEffect(() => {
         setIsLoggedIn(true)
         history.push("/");
-    }, []);
+    }, [history, setIsLoggedIn]);
 
     return (
         <div></div>
