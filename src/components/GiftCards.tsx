@@ -11,9 +11,8 @@ export const GiftCards = (props: GiftCardsProps) => {
 
     function remove(id: number) {
         removeGiftCard(id).then(giftCard => {
-            console.log(giftCard);
             if (giftCard.ok) {
-                const filteredProducts = giftCards.filter(giftCard => giftCard.id !== id)
+                const filteredProducts = giftCards.filter(gc => gc.id !== id)
                 setGiftCards([...filteredProducts])
             }
         });
