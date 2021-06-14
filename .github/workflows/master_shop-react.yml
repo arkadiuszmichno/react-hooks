@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_b8c25aed6f3046e8af41d38b7fadec90 }}/amichno/ebiznes:${{ github.sha }}
+        tags: amichno/ebiznes:latest
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'shop-react'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_b28aaf2bfdc645de9938ec56f2cb179e }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_b8c25aed6f3046e8af41d38b7fadec90 }}/amichno/ebiznes:${{ github.sha }}'
+        images: 'amichno/ebiznes:latest'
