@@ -8,7 +8,8 @@ RUN apt-get update &&\
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 ENV PATH $JAVA_HOME/bin:$PATH
-ENV SERVER_URL https://scala-app-service.azurewebsites.net
+ENV SERVER_URL https://scala-shop.azurewebsites.net
+
 #WGET, GNUPG2
 RUN apt update && apt install -y wget &&\
 	apt install -y curl &&\
