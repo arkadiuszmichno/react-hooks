@@ -1,7 +1,7 @@
 import { ICategory } from "../interface";
 
 export const fetchCategories = async (): Promise<ICategory[]> => {
-    return fetch(`http://localhost:9000/category`)
+    return fetch(process.env.SERVER_URL + `/category`)
         .then(response => response.json())
 }
 
@@ -9,7 +9,7 @@ export const addCategory = async (name: string): Promise<ICategory> => {
     let body = {
         name: name
     }
-    return fetch(`http://localhost:9000/category`, {
+    return fetch(process.env.SERVER_URL + `/category`, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -22,7 +22,7 @@ export const addCategory = async (name: string): Promise<ICategory> => {
 }
 
 export const removeCategory = async (id: number) => {
-    return fetch(`http://localhost:9000/category/` + id, {
+    return fetch(process.env.SERVER_URL + `/category/` + id, {
         method: 'DELETE',
         mode: 'cors',
         headers: {

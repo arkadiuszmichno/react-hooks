@@ -1,14 +1,14 @@
 import {IBook} from "../interface";
 
 export const fetchBooks = async (): Promise<IBook[]> => {
-    return fetch(`http://localhost:9000/books`)
+    return fetch(process.env.SERVER_URL + `/books`)
         .then(response => response.json())
 }
 
 
 export const addBook = async (body: any): Promise<IBook> => {
     body.category = parseInt(body.category);
-    return fetch(`http://localhost:9000/books`, {
+    return fetch(process.env.SERVER_URL + `/books`, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -21,7 +21,7 @@ export const addBook = async (body: any): Promise<IBook> => {
 }
 
 export const removeBook = async (id: number) => {
-    return fetch(`http://localhost:9000/books/` + id, {
+    return fetch(process.env.SERVER_URL + `/books/` + id, {
         method: 'DELETE',
         mode: 'cors',
         headers: {

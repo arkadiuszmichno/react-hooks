@@ -8,7 +8,7 @@ RUN apt-get update &&\
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 ENV PATH $JAVA_HOME/bin:$PATH
-
+ENV SERVER_URL https://scala-app-service.azurewebsites.net
 #WGET, GNUPG2
 RUN apt update && apt install -y wget &&\
 	apt install -y curl &&\
@@ -33,7 +33,6 @@ RUN apt-get update &&\
 RUN npm install -g npm@latest
 
 EXPOSE 3000
-EXPOSE 9000
 
 RUN useradd -ms /bin/bash amichno
 RUN adduser amichno sudo

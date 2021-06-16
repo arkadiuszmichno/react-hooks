@@ -59,7 +59,7 @@ export const SignInModal = (props: SignInModalProps) => {
     }, []);
 
     function navigateTo(url: string) {
-        window.location.assign("http://localhost:9000" + url)
+        window.location.assign(process.env.SERVER_URL + url)
     }
 
     return (
