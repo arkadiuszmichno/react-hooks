@@ -43,3 +43,4 @@ WORKDIR /home/amichno/
 RUN mkdir /home/amichno/workshop/
 WORKDIR /home/amichno/workshop/shop
 COPY . ./
+RUN npm install
