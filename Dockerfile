@@ -8,7 +8,7 @@ RUN apt-get update &&\
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 ENV PATH $JAVA_HOME/bin:$PATH
-ENV SERVER_URL https://scala-shop.azurewebsites.net
+ENV REACT_APP_SERVER_URL https://scala-shop.azurewebsites.net
 
 #WGET, GNUPG2
 RUN apt update && apt install -y wget &&\
@@ -38,7 +38,7 @@ EXPOSE 3000
 RUN useradd -ms /bin/bash amichno
 RUN adduser amichno sudo
 
-USER amichno
+USER root
 WORKDIR /home/amichno/
 RUN mkdir /home/amichno/workshop/
 WORKDIR /home/amichno/workshop/shop

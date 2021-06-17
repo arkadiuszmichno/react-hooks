@@ -1,14 +1,14 @@
 import {IUser} from "../interface";
 
 export const fetchUsers = async (): Promise<IUser[]> => {
-    return fetch(process.env.SERVER_URL + `/user`)
+    return fetch(process.env.REACT_APP_SERVER_URL + `/user`)
         .then(response => response.json())
 }
 
 
 export const addUser = (body: any): Promise<any> => {
     console.log("addUser")
-    return fetch(process.env.SERVER_URL + `/signUp`, {
+    return fetch(process.env.REACT_APP_SERVER_URL + `/signUp`, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -20,7 +20,7 @@ export const addUser = (body: any): Promise<any> => {
     })
 }
 export const signUserIn = (body: any): Promise<any> => {
-    return fetch(process.env.SERVER_URL + `/signIn`, {
+    return fetch(process.env.REACT_APP_SERVER_URL + `/signIn`, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -33,7 +33,7 @@ export const signUserIn = (body: any): Promise<any> => {
 }
 
 export const removeUser = async (id: number) => {
-    return fetch(process.env.SERVER_URL + `/user/` + id, {
+    return fetch(process.env.REACT_APP_SERVER_URL + `/user/` + id, {
         method: 'DELETE',
         mode: 'cors',
         headers: {
