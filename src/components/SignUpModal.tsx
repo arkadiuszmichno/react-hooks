@@ -36,7 +36,7 @@ export const SignUpModal = (props: SignUpModalProps) => {
 
     const setModalIsOpenToFalse =()=>{
         setModalIsOpen(false)
-        window.location.assign("http://localhost:3000")
+        window.location.assign(process.env.REACT_APP_CLIENT_URL + '')
     }
 
     useEffect(() => {
@@ -49,7 +49,7 @@ export const SignUpModal = (props: SignUpModalProps) => {
                 console.log(response)
                 if (response.status === 201) {
                     setModalIsOpen(false)
-                    window.location.assign("http://localhost:3000/signIn")
+                    window.location.assign(process.env.REACT_APP_CLIENT_URL + "/signIn")
                 } else {
                     setIsError(true)
                     setErrorCode("User with this e-mail already exists!")
